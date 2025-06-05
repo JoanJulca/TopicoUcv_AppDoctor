@@ -1,0 +1,60 @@
+<app-header title="Login Doctor"></app-header>
+<ion-content class="content-background">
+  <div class="form-container">
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit">
+      <app-logo class="animated-logo"></app-logo>
+
+      <!--=============== Email ===================-->
+      <app-custom-input 
+        autocomplete="email" 
+        icon="mail-outline"
+        [control]="form.controls.email"
+        type="email"
+        label="Correo"
+        class="input-field"
+      ></app-custom-input>
+
+      <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.touched">
+        <div *ngIf="form.controls.email.errors?.['required']">El correo es requerido</div>
+        <div *ngIf="form.controls.email.errors?.['email']">Ingrese un correo válido</div>
+      </div>
+      <!--=============== Email ===================-->
+
+      <app-custom-input 
+        [control]="form.controls.password"
+        icon="lock-closed-outline"
+        type="password"
+        label="Contraseña"
+        class="input-field"
+      ></app-custom-input>
+
+      <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+        <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida</div>
+      </div>
+
+      <!-- Remember Me Checkbox -->
+      <div class="remember-me-container">
+        <ion-checkbox slot="start" formControlName="rememberMe"></ion-checkbox>
+        <ion-label class="remember-me-label">Recordar</ion-label>
+      </div>
+
+      <p routerLink="forgot-password" class="forgot-password-link">¡Olvidaste tu contraseña?</p>
+
+      <!-- Botones -->
+      <ion-button expand="block" mode="ios" class="submit-button elegant-button" type="submit" [disabled]="form.invalid">
+        Ingresar
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button class="ion-margin-top register-button elegant-button" routerLink="sign-up" expand="block" mode="ios" fill="outline">
+        Registrar
+        <ion-icon slot="end" name="person-add-outline"></ion-icon>
+      </ion-button>
+
+      <!-- Botón de retroceso -->
+      <ion-button class="back-button elegant-button" routerLink="/welcome" expand="block" mode="ios" fill="outline">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

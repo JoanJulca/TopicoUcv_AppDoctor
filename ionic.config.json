@@ -1,0 +1,7 @@
+{
+  "name": "Topico_ucv",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,98 @@
+/* Estilos generales */
+.content-background {
+  background: linear-gradient(135deg,  #a12a2a, #793b3b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  background: linear-gradient(135deg, #a12a2a, #793b3b);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animated-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.validators {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.forgot-password-link {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.elegant-button:hover {
+  transform: scale(1.05);
+  --color: rgb(255, 0, 0);
+  --background: linear-gradient(135deg, #eef4fa, #ffffff);
+}
+
+.submit-button{
+  --background: linear-gradient(135deg, #fdfdfd, #ffe9e9);
+  --color: rgb(255, 0, 0);
+  --border-color: transparent; /* Elimina el contorno */
+}
+
+.register-button, .back-button {
+  --background: linear-gradient(135deg, #fdfdfd, #ffe9e9);
+  --color: rgb(255, 0, 0);
+  --border-color: transparent; /* Elimina el contorno */
+}
+
+.back-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fc0202;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  background-color: #ffcccc;
+}
+
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.remember-me-label {
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 4px;
+}
